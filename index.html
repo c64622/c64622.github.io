@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知时 (Not Today) - 技术支持与隐私政策</title>
+    <style>
+        :root {
+            --neon-green: #00ff9d;
+            --neon-blue: #00d2ff;
+            --dark-bg: #0a0a0b;
+            --card-bg: #151517;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 1px solid #333;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--neon-green);
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+        }
+
+        .tagline {
+            color: var(--neon-blue);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        section::before {
+            content: "[ SYSTEM_DATA ]";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: var(--dark-bg);
+            padding: 0 10px;
+            font-size: 0.7rem;
+            color: #666;
+        }
+
+        h2 {
+            color: var(--neon-green);
+            font-size: 1.2rem;
+            border-left: 4px solid var(--neon-green);
+            padding-left: 15px;
+            margin-top: 0;
+        }
+
+        p, li {
+            font-size: 0.95rem;
+            color: #aaa;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .contact-btn:hover {
+            background: var(--neon-green);
+            color: var(--dark-bg);
+            box-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 60px;
+        }
+
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="container">
+        <header>
+            <h1>知时 / NOT TODAY</h1>
+            <p class="tagline">> 今天的你，依然在线。 | STATUS: ONLINE</p>
+        </header>
+
+        <section id="support">
+            <h2>技术支持 (Support)</h2>
+            <p>在使用“知时”App 过程中遇到任何问题，或有任何改进建议，请通过以下方式联系我：</p>
+            <ul>
+                <li><strong>邮件联系：</strong> c64622@163.com</li>
+                <li><strong>响应时间：</strong> 通常在 24 小时内回复</li>
+            </ul>
+            <a href="mailto:c64622@163.com" class="contact-btn">发送邮件获取支持</a>
+        </section>
+
+        <section id="privacy">
+            <h2>隐私政策 (Privacy Policy)</h2>
+            <p>我们深知数据隐私对您的重要性，尤其是涉及“末日协议”等敏感信息。本 App 的隐私准则如下：</p>
+            <ul>
+                <li><strong>本地存储：</strong> 您的所有数据（包括协议内容、联系人、配置）均仅存储在您的 iPhone 本地。</li>
+                <li><strong>高强度加密：</strong> 敏感信息采用 AES-GCM 算法加密，解密密钥安全存储于 iOS 系统级 Keychain 中。</li>
+                <li><strong>无云端传输：</strong> 我们不设后端服务器，不会收集、上传或分享您的任何个人数据。</li>
+                <li><strong>身份验证：</strong> 访问敏感配置受 FaceID 或设备密码保护，确保只有您本人可以查看或修改。</li>
+            </ul>
+        </section>
+
+        <section id="faq">
+            <h2>常见问题 (FAQ)</h2>
+            <p><strong>Q: 为什么需要配置邮箱密码？</strong><br>
+            A: 为了在您处于极端失联状态时，系统能代您发送“末日协议”邮件。我们建议使用授权码（如网易/QQ邮箱）以确保主账号安全。</p>
+            <p><strong>Q: 后台任务运行可靠吗？</strong><br>
+            A: 我们使用了 iOS 最新的 BackgroundTasks 框架。为了保证触发的可靠性，建议定期打开 App 刷新系统活跃度。</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 知时 (Not Today). All rights reserved.</p>
+            <p>Designed for the digital survivors.</p>
+        </footer>
+    </div>
+</body>
+</html>
